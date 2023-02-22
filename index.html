@@ -42,7 +42,7 @@
         <div class="container block-text">
           <h1 class="block-title">Effective Solutions for Your Business</h1>
           <button data-modal-open type="button" class="button">Order Service</button>
-          <div data-modal class="backdrop is-hidden">
+          <div class="backdrop" data-modal>
             <div class="modal">
               <button data-modal-close type="button" class="modal-close">
                 <svg class="modal-icon" width="8" height="8">
@@ -50,6 +50,57 @@
                   </use>
                 </svg>
               </button>
+              <p class="modal-title">Leave your contacts and we will call you back</p>
+              <form class="modal-form">
+                <label>
+                  <span class="input-wrap">
+                    <span class="modal-input-name">Name</span>
+                    <input type="text"
+                      name="user-name"
+                      class="modal-input"
+                      placeholder=""/>
+                    <svg class="icon-input" width="18" height="18">
+                      <use href="./images/icons.svg#icon-person-input"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label>
+                  <span class="input-wrap">
+                  <span class="modal-input-name">Phone</span>
+                    <input type="tel" 
+                      minlength="12" 
+                      name="user-phone" 
+                      class="modal-input" 
+                      placeholder="Phone" 
+                      value="+48454716190"/>
+                    <svg class="icon-input" width="18" height="18">
+                      <use href="./images/icons.svg#icon-phone-modal"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label>
+                  <span class="input-wrap">
+                  <span class="modal-input-name">Email</span>
+                    <input type="text" 
+                      name="user-mail" 
+                      class="modal-input" 
+                      placeholder=""/>
+                    <svg class="icon-input" width="18" height="18">
+                      <use href="./images/icons.svg#icon-email-modal"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label>
+                  <span class="input-wrap">
+                  <span class="modal-input-name">Comment</span>
+                    <input type="text"
+                      name="user-comment" 
+                      class="modal-input modal-input-comment" 
+                      placeholder="Text input"/>
+                  </span>
+                </label>
+                <button type="submit" class="modal-submit-buttom">Send</button>
+              </form>
             </div>
           </div>
         </div>
@@ -415,6 +466,22 @@
               </a>
             </li>
           </ul>
+          </div>
+          <div>
+            <form class="footer-form">
+              <label>
+                <span class="footer-wrap-subskribe">
+                  <span class="footer-input-name">Subscribe</span>
+                  <input type="email"
+                      name="user-email"
+                      class="footer-input"
+                      placeholder=""/>
+                    <svg class="icon-input-footer" width="18" height="18">
+                      <use href="./images/icons.svg#icon-post-footer"></use>
+                    </svg>
+                  </span>
+                </label>
+                <button type="submit" class="footer-submit-buttom">Subskribe</button>
           </div>
       </div>
     </footer>
