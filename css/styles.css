@@ -344,8 +344,7 @@ fill: currentColor;
     color: var(--border-color);
     font-weight: 400;
     font-size: 12px;
-    line-height: 14px;
-    /* identical to box height */
+    line-height: 1.17;
     letter-spacing: 0.01em;
 }
 .input-wrap {
@@ -363,12 +362,27 @@ fill: currentColor;
     fill: var(--main-navy);
     background-color: transparent;
 }
-.modal-input-comment {
+.modal-comment {
     width: 360px;
     height: 120px;
     text-align: start;
     padding-top: 8px;
     padding-left: 16px;
+    outline: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+}
+.modal-comment::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--border-color);
+    
+}
+.modal-comment:is(:hover, :focus) {
+    border-color: var(--logo-iris);
 }
 /*.modal-input:not(:focus):not(:placeholder-shown):valid {
     background-color: var(--active-icons);
@@ -391,6 +405,7 @@ fill: currentColor;
     width: 169px;
     height: 56px;
     margin: 0 auto;
+    margin-top: 24px;
     color: var(--main-white);
     background-color: var(--logo-iris);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

@@ -71,8 +71,8 @@
                       minlength="12" 
                       name="user-phone" 
                       class="modal-input" 
-                      placeholder="Phone" 
-                      value="+48454716190"/>
+                      placeholder="" 
+                      value=""/>
                     <svg class="icon-input" width="18" height="18">
                       <use href="./images/icons.svg#icon-phone-modal"></use>
                     </svg>
@@ -90,14 +90,12 @@
                     </svg>
                   </span>
                 </label>
-                <label>
+                <label class="input-wrap" for="user-comment">
                   <span class="modal-input-name">Comment</span>
-                  <label class="input-wrap">
-                    <input type="text"
-                      name="user-comment" 
-                      class="modal-input modal-input-comment" 
-                      placeholder="Text input"/>
-                  </span>
+                  <textarea class="modal-comment"
+                    for="user-comment"
+                    id="user-comment"
+                    placeholder="Text input"></textarea>
                 </label>
                 <button type="submit" class="modal-submit-buttom">Send</button>
               </form>
@@ -471,7 +469,7 @@
             <form class="footer-form">
               <label>
                 <span class="footer-wrap-subskribe">
-                  <span class="footer-input-name">Subscribe</span>
+                  <p class="footer-input-name">Subscribe</p>
                   <input type="email"
                       name="user-email"
                       class="footer-input"
