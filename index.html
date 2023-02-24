@@ -97,6 +97,17 @@
                     id="user-comment"
                     placeholder="Text input"></textarea>
                 </label>
+                <div class="wrap-checkbox">
+                  <input id="policy"
+                      type="checkbox" 
+                      name="user-agree" 
+                      class="modal-checkbox visually-hidden"
+                      value="accept" 
+                      required=""/>
+                    <label for="policy" class="modal-input-checkbox">I accept the terms and conditions of the 
+                      <a class="privacy-modal-link" href="">Privacy Policy</a>
+                    </label>
+                </div>
                 <button type="submit" class="modal-submit-buttom">Send</button>
               </form>
             </div>
@@ -465,8 +476,8 @@
             </li>
           </ul>
           </div>
-          <div>
-            <form class="footer-form">
+          <div class="footer-form">
+            <form>
               <label>
                 <span class="footer-wrap-subskribe">
                   <p class="footer-input-name">Subscribe</p>
@@ -474,12 +485,15 @@
                       name="user-email"
                       class="footer-input"
                       placeholder=""/>
+                  </span>
+                </label>
+                <button type="submit" class="footer-submit-button">Subskribe
+                  <span>
                     <svg class="icon-input-footer" width="18" height="18">
                       <use href="./images/icons.svg#icon-post-footer"></use>
                     </svg>
                   </span>
-                </label>
-                <button type="submit" class="footer-submit-buttom">Subskribe</button>
+                </button>
           </div>
       </div>
     </footer>
