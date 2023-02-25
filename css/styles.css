@@ -239,6 +239,7 @@ body {
     top: 0;
     left: 0;
     opacity: 1;
+    z-index: 100;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--backdrop-background);
 }
@@ -288,7 +289,7 @@ body {
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon {
-fill: currentColor;
+    fill: currentColor;
 }
 .modal-close:is(:hover, :focus) {
     color: var(--main-white);
@@ -728,9 +729,19 @@ fill: currentColor;
 .footer-form {
     display: block;
     align-items: baseline;
+    justify-content: baseline;
+    gap: 24px;
+}
+.footer-form-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .footer-wrap-subskribe {
-position: relative;
+    display: block;
+    align-items: baseline;
+    gap: 16px;
 }
 .footer-input-name {
     font-weight: 500;
@@ -749,12 +760,27 @@ position: relative;
     height: 40px;
 
 }
-.footer-submit-button {
+.footer-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    text-align: start;
+    color: rgba(255, 255, 255, 0.6) var();
+}
+.footer-button {
+    display: block;
+    align-items: center;
+    margin-left: 24px;
+    padding-top: 40px;
+}
+.submit-button {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
+    max-width: 165px;
+    height: 40px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -764,18 +790,18 @@ position: relative;
     background-color: var(--logo-iris);
     padding: 8px 24px;
     gap: 16px;
-    margin-left: 24px;
     border: none;
     border-radius: 4px;
 }
 .icon-input-footer {
-    position: absolute;
-  
     top: 8px
     transform: translatex(-50%, -50%);
     fill: currentColor;
     background-color: transparent;
 } 
+.submit-button:is(:hover, :focus) {
+    background-color: var(--active-ocean);
+}
 
 /*--------------------PoRTFOLIO-----------------*/
 .portfolio {
