@@ -355,7 +355,6 @@ body {
 .modal-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 0px;
     gap: 8px;
 }
@@ -376,15 +375,20 @@ body {
     border: 1px solid var(--border-input-modal);
     border-radius: 4px;
     width: 360px;
-    height: 58px;
-    padding-left: 16px;
+    height: 40px;
+    padding-left: 38px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 4px;
     outline: transparent;
     background-color: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:is(:hover, :focus) {
     border-color: var(--logo-iris);
+    color: var(--color-black);
 }
 
 .modal-input:is(:focus, :hover)+.icon-input {
@@ -402,12 +406,12 @@ body {
 .input-wrap {
     display: block;
     position: relative;
-    margin-bottom: 8px;
 }
 
 .icon-input {
     position: absolute;
-    left: 4px;
+    left: 16px;
+    top: 8px;
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
@@ -427,7 +431,8 @@ body {
     border: 1px solid var(--border-input-modal);
     border-radius: 4px;
     resize: none;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment::placeholder {
@@ -436,11 +441,11 @@ body {
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: var(--border-color);
-
 }
 
 .modal-comment:is(:hover, :focus) {
     border-color: var(--logo-iris);
+    color: var(--color-black);
 }
 
 .wrap-checkbox {
@@ -456,13 +461,11 @@ body {
 
 .modal-input-checkbox {
     display: flex;
-    font-weight: 400;
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: var(--checkbox-color);
     text-align: start;
-
 }
 
 .modal-input-checkbox::before {
@@ -530,6 +533,7 @@ body {
     box-shadow: 0px 4px 4px var(--modal-button-shadow);
     border-radius: 4px;
     border: none;
+    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -834,28 +838,19 @@ body {
     background-color: var(--active-icons);
     color: var(--back-cloud);
 }
-
-.footer-form {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    margin-left: auto;
-    gap: 24px;
-}
-
 .footer-form-wrap {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
+    gap: 24px;
+    margin-left: auto;
 }
-
 .footer-wrap-subscribe {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     gap: 16px;
-    
 }
 
 .footer-input-name {
@@ -864,17 +859,26 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-white);
-    
+
 }
 
 .footer-input {
     border: 1px solid var(--border-input-footer);
     filter: drop-shadow(0px 4px 4px var(--modal-button-shadow));
     border-radius: 4px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 4px;
     background: transparent;
     width: 264px;
     height: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.footer-input:is(:hover, :focus) {
+    color: var(--main-white);
 }
 
 .footer-input::placeholder {
@@ -882,22 +886,14 @@ body {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    padding-left: 16px;
     text-align: start;
     color: var(--footer-placeholder-color);
 }
-
-.footer-button {
-    display: block;
-    align-items: center;
-    margin-left: 24px;
-    padding-top: 40px;
-}
-
 .submit-button {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    cursor: pointer;
     max-width: 165px;
     height: 40px;
     padding: 8px 24px;
@@ -1004,6 +1000,7 @@ body {
 }
 
 .project-title {
+    color: var(--main-navy);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
